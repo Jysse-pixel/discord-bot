@@ -1,7 +1,5 @@
 {
     "name": "Prince",
-    "version": "1.0.0",
-    "description": "",
     "main": "index.js",
     "author": "Jysse",
     "license": "ISC",
