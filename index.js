@@ -1,3 +1,5 @@
+const Client = new Discord.Client;
+
 Client.on("ready", () => {
     console.log("Bot Prêt");
 
