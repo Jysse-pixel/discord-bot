@@ -14,7 +14,7 @@ Client.on('ready', () => {
 });
 
 Client.on("guildMemberAdd", member => {
-    Client.channels.cache.get('817421806076035072').send('Bienvenue sur le Serveur de la Famille Prince $(member.user.tag)!');
+    Client.channels.cache.get('817046353468194879').send('Bienvenue sur le Serveur de la Famille Prince $(member.user.tag)!');
     member.roles.add('817082780319744030')
 });
 
