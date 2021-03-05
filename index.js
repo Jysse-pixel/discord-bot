@@ -14,7 +14,7 @@ Client.on('ready', () => {
 });
 
 Client.on("guildMemberAdd", member => {
-    member.guild.channels.cache.find(channel => channel.id === "817421806076035072".send('Bienvenue, ' + member.user.tag + ' !' ))
+    member.guild.channels.cache.find(channel => channel.id === "817421806076035072".send('Bienvenue, ' + member.user.tag + ' ! ' ))
     member.roles.add("817098925479559249")
 });
 
