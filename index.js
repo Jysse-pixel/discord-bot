@@ -13,9 +13,9 @@ Client.on('ready', () => {
     Client.user.setActivity('Servir Paul Prince')
 });
 
-Client.on("guildMemberAdd" , member => {
-    Client.channels.cache.get('817421806076035072').send('Bienvenue sur le Serveur de la Famille Prince $(member.user.tag)!');
-    member.roles.add('817082780319744030');
-});
+client.on('guildMemberAdd', member => {
+    member.guild.channels.cache.get('817421806076035072').send(`${member} a rejoint le serveur de la Famille Prince. Nous sommes désormais ${member.guild.memberCount} ! 🎉`)
+    member.roles.add('817082780319744030')
+})
 
 Client.login(process.env.TOKEN);
