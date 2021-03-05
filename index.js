@@ -11,7 +11,7 @@ Client.on("ready", () => {
 Client.on('ready', () => {
     Client.user.setStatus("online")
     Client.user.setActivity('Servir **Paul Prince**')
-};
+});
 
 Client.on("guildMemberAdd", member => {
     member.guild.channels.cache.find(channel => channel.id === "817421806076035072".send('Bienvenue, ' + member.user.tag + ' !' ))
