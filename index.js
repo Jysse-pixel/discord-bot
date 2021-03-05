@@ -8,9 +8,9 @@ Client.on("ready", () => {
 
 });
 
-bot.on('ready'), async () =>{
-    bot.user.setStatus("online")
-    bot.user.activity("servir Paul Prince !")
+Client.on('ready', () => {
+    Client.user.setStatus("online")
+    Client.user.setActivity('Servir **Paul Prince**')
 };
 
 Client.on("guildMemberAdd", member => {
