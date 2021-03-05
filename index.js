@@ -1,6 +1,8 @@
 const Discord = require("discord.js");
 
-const Client = new Discord.Client;
+Client = new Discord.Client({
+    fetchAllMembers: true
+}),
 
 
 Client.on("ready", () => {
