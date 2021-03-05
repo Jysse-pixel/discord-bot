@@ -13,10 +13,9 @@ Client.on('ready', () => {
     Client.user.setActivity('Servir Paul Prince')
 });
 
-Client.on("guildMemberAdd", (member) => {
-    let welcomeChannel = client.channels.find(ch => ch.name === "🎷-bienvenue-🎺");
-    welcomeChannel.send('Bienvenue, ' + member.user.tag + ' !'); // tag == User#1234
-    member.roles.add("817098925479559249");
+Client.on("guildMemberAdd", member => {
+    Client.channels.cache.get('817421806076035072').send('Bienvenue sur le Serveur de la Famille Prince $(member.user.tag)!');
+    member.roles.add('817082780319744030')
 });
 
 Client.login(process.env.TOKEN);
