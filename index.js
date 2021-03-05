@@ -10,7 +10,7 @@ Client.on("ready", () => {
 
 Client.on('ready', () => {
     Client.user.setStatus("online")
-    Client.user.setActivity('Servir **Paul Prince**')
+    Client.user.setActivity('Servir Paul Prince')
 });
 
 Client.on("guildMemberAdd", member => {
