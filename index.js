@@ -15,7 +15,7 @@ Client.on('ready', () => {
 
 Client.on("guildMemberAdd", member => {
     let welcomeChannel = client.channels.cache.get('817421806076035072');
-    welcomeChannel.send('Bienvenue, ' + member.user.tag + ' ! ' ); // tag == User#1234
+    welcomeChannel.send('Bienvenue, ' + member.user.tag + ' !'); // tag == User#1234
     member.roles.add("817098925479559249");
 });
 
