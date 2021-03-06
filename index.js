@@ -10,7 +10,7 @@ Client.on("ready", () => {
 
 });
 
-Client.on('guildMemberAdd', guildMember =>{
+Client.on('guildMemberAdd', guildMember => {
     let welcomeRole = guildMember.guild.roles.cache.find(role => role.name === '817098925479559249');
 
     guildMember.roles.add(welcomeRole);
