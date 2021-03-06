@@ -1,6 +1,6 @@
 module.exports = (Client) => {
     const channelId = "817421806076035072";
-    client.on("guildMemberAdd", (member) => {
+    Client.on("guildMemberAdd", (member) => {
       console.log(member);
   
       const message = `Welcome <@${
