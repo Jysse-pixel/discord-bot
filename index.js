@@ -16,8 +16,10 @@ Client.on('ready', () => {
 });
 
 Client.on('guildMemberAdd', member => {
-    member.guild.channels.cache.get('817421806076035072').send(`${member} a rejoint le serveur de la Famille Prince. Nous sommes désormais ${member.guild.memberCount} ! 🎉`)
-    member.roles.add('817082780319744030')
-});
+    member.guild.channels.cache.get('817421806076035072').send(`${member}`, new Discord.MessageEmbed()
+        .setDescription(`${member} a rejoint le serveur. Nous sommes désormais ${member.guild.memberCount} ! 🎉`)
+        .setColor('#00ff00'))
+    member.roles.add('817098925479559249')
+})
 
 Client.login(process.env.TOKEN);
