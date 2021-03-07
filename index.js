@@ -18,6 +18,7 @@ Client.on('guildMemberAdd', (member) => {
     .setColor("BLUE")
     .setTimestamp()
     Client.channel.cache.get(channel.ID).send(embed)
+    member.roles.add('817098925479559249')
 })
 
 Client.on('ready', () => {
