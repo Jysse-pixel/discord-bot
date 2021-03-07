@@ -1,5 +1,4 @@
 const Discord = require("discord.js");
-const welcome = require("./welcome");
 
 Client = new Discord.Client({
     fetchAllMembers: true
@@ -8,9 +7,6 @@ Client = new Discord.Client({
 
 Client.on("ready", () => {
     console.log("Bot Prêt");
-
-    welcome(client);
-
 });
 
 Client.on('ready', () => {
