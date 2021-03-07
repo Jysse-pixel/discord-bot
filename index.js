@@ -14,10 +14,10 @@ Client.on('guildMemberAdd', (member) => {
     if(member.guild.id != '817046353468194877') return;
     let embed = new Discord.MessageEmbed()
     .setTitle(`Famille Prince`)
-    .setDescription(`${member.username} a rejoint le serveur de la Famille Prince ! 🎉`)
+    .setDescription(`\`${member.username}\ ` a rejoint le serveur de la Famille Prince ! 🎉`)
     .setColor("BLUE")
     .setTimestamp()
-    channelID.send(embed)
+    Client.channels.cache.get(channel.ID).send(embed)
 })
 
 Client.on('ready', () => {
