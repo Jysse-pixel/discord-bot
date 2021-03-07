@@ -10,7 +10,7 @@ Client.on("ready", () => {
 });
 
 Client.on('guildMemberAdd', (member) => {
-    let.channelID = '817421806076035072';
+    let channelID = '817421806076035072';
     if(member.guild.id != '817046353468194877') return;
     let embed = new Discord.MessageEmbed()
     .setTitle(`Famille Prince`)
