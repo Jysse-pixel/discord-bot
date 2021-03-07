@@ -9,13 +9,13 @@ Client.on("ready", () => {
     console.log("Bot Prêt");
 });
 
-Client.on('guildMemberAdd', member => {
-    member.guild.channels.cache.get('817421806076035072').send(`${member.user.username} a rejoint la **Famille Prince**. Nous sommes désormais ${member.guild.memberCount} ! 🎉`);
+Client.on('guildMemberAdd', (member) => {
+    member.guild.channels.cache.get('817421806076035072').send(`${member.id} a rejoint la **Famille Prince**. Nous sommes désormais ${member.guild.memberCount} ! 🎉`);
     member.roles.add('817098925479559249');
 });
  
-Client.on('guildMemberRemove', member => {
-    member.guild.channels.cache.get('817421806076035072').send(`${member.user.username} a quitté la **Famille Prince**... `);
+Client.on('guildMemberRemove', (member) => {
+    member.guild.channels.cache.get('817421806076035072').send(`${member.id} a quitté la **Famille Prince**... `);
 });
 
 Client.on('ready', () => {
