@@ -17,7 +17,7 @@ Client.on('guildMemberAdd', member => {
     .setDescription(`\`${member.username}\` a rejoint le serveur de la Famille Prince ! 🎉`)
     .setColor("BLUE")
     .setTimestamp()
-    member.channels.cache.get(channelID).send(embed)
+    member.channels.get(channelID).send(embed)
     member.roles.add('817098925479559249')
 })
 
