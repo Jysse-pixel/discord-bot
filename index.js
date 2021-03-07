@@ -10,13 +10,15 @@ Client.on("ready", () => {
 });
 
 Client.on('guildMemberAdd', (member) => {
-    member.guild.channels.cache.get('817421806076035072').send(`${member.id} a rejoint la **Famille Prince**. Nous sommes désormais ${member.guild.memberCount} ! 🎉`);
-    member.roles.add('817098925479559249');
-});
- 
-Client.on('guildMemberRemove', (member) => {
-    member.guild.channels.cache.get('817421806076035072').send(`${member.id} a quitté la **Famille Prince**... `);
-});
+    let.channelID = '817421806076035072';
+    if(member.guild.id != '817046353468194877') return;
+    let embed = new Discord.MessageEmbed()
+    .setTitle(`Famille Prince`)
+    .setDescription(`${member.username} a rejoint le serveur de la Famille Prince ! 🎉`)
+    .setColor("BLUE")
+    .setTimestamp()
+    channelID.send(embed)
+})
 
 Client.on('ready', () => {
     Client.user.setStatus("online")
