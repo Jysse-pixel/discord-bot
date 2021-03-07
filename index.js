@@ -10,12 +10,12 @@ Client.on("ready", () => {
 });
 
 Client.on('guildMemberAdd', member => {
-    member.guild.channels.cache.get(config.greeting.channel).send(`${member} a rejoint le serveur. Nous sommes désormais ${member.guild.memberCount} ! 🎉`)
-    member.roles.add(config.greeting.role)
+    member.guild.channels.cache.get('817421806076035072').send(`${member.user.tag} a rejoint la **Famille Prince**. Nous sommes désormais ${member.guild.memberCount} ! 🎉`)
+    member.roles.add('817098925479559249')
 })
  
 Client.on('guildMemberRemove', member => {
-    member.guild.channels.cache.get(config.greeting.channel).send(`${member.user.tag} a quitté le serveur... 😢`)
+    member.guild.channels.cache.get('817421806076035072').send(`${member.user.tag} a quitté la **Famille Prince**... `)
 })
 
 Client.on('ready', () => {
