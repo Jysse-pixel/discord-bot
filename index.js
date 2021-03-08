@@ -165,7 +165,7 @@ bot.on('message', message => {
         let Response = responses[Math.floor(Math.random()*(responses.length)-1)]
         let embed = new Discord.MessageEmbed()
         .setTitle(`Roll`)
-        .setDescription(`Tu as roulé ${response}`)
+        .setDescription(`Tu as roulé ${Response}`)
         .setColor("BLUE")
         message.channel.send(embed)
     }
