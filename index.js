@@ -1,3 +1,4 @@
+
 const Discord = require("discord.js");
 
 const bot = new Discord.Client();
@@ -12,7 +13,7 @@ bot.on('guildMemberAdd', (member) => {
     if (member.guild.id != '817046353468194877') return;
     let embed = new Discord.MessageEmbed()
     .setTitle(`Famille Prince`)
-    .setDescription(`\`${member.username}\` a rejoint le serveur de la Famille Prince ! 🎉`)
+    .setDescription(`\`${member.user.tag}\` a rejoint le serveur de la Famille Prince ! 🎉`)
     .setColor("BLUE")
     .setTimestamp()
     bot.channels.cache.get(channelID).send(embed)
