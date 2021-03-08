@@ -1,29 +1,27 @@
 const Discord = require("discord.js");
 
-Client = new Discord.Client({
-    fetchAllMembers: true
-}),
+const bot = new Discord.Client();
 
 
-Client.on("ready", () => {
+bot.on("ready", () => {
     console.log("Bot Prêt");
 });
 
-Client.on('guildMemberAdd', member => {
+bot.on('guildMemberAdd', (member) => {
     let channelID = '817421806076035072';
-    if(member.guild.id != '817046353468194877') return;
+    if (member.guild.id != '817046353468194877') return;
     let embed = new Discord.MessageEmbed()
     .setTitle(`Famille Prince`)
     .setDescription(`\`${member.username}\` a rejoint le serveur de la Famille Prince ! 🎉`)
     .setColor("BLUE")
     .setTimestamp()
-    member.channels.get(channelID).send(embed)
+    bot.channels.cache.get(channelID).send(embed)
     member.roles.add('817098925479559249')
 })
 
-Client.on('ready', () => {
-    Client.user.setStatus("online")
-    Client.user.setActivity('Servir Paul Prince')
+bot.on('ready', () => {
+    bot.user.setStatus("online")
+    bot.user.setActivity('Servir Paul Prince')
 })
 
-Client.login(process.env.TOKEN);
+bot.login(process.env.TOKEN);
