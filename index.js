@@ -24,4 +24,37 @@ bot.on('ready', () => {
     bot.user.setActivity('Servir Paul Prince')
 });
 
+bot.on('message', message => {
+
+    if  (message.content.startsWith("/clear")){
+
+        if(message.member.hasPermission('MANAGE_MESSAGES')){
+
+            let args = message.content.trim().split(/ +/g);
+
+            if(args[1]){
+                if(!isNaN(args[1]) && args[1] >= 1 && args[1] <= 99){
+
+                    message.channel.bulkDelete(args[1])
+                    message.channel.send(`Tu as supprimé ${args[1]} messages(s)`)
+                    message.channel.bulkDelete(1)
+
+                }
+                else{
+                    message.channel.send(`Tu dois indiquer une valeur entre 1 et 99 !`)
+                }
+            }
+
+            else{
+                message.channel.send(`Tu dois indiquer un nombre de messages a supprimer !`)
+
+            }
+         }
+         else{
+             message.channel.send(`Tu n'as pas la permission pour utiliser cette commande !`)
+         }
+    }
+});
+
+
 bot.login(process.env.TOKEN);
