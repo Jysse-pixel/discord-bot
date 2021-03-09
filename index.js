@@ -1,6 +1,8 @@
 const Discord = require("discord.js");
 
 const bot = new Discord.Client();
+const queue = new Map();
+
 
 const ytdl = require('ytdl-core')
 const PREFIX = '/'
