@@ -5,7 +5,6 @@ const fs = require("fs");
 const fetch = require('node-fetch');
 const ytdl = require("ytdl-core");
 const queue = new Map();
-const search = require('youtube-search');
 const PREFIX = '/'
 
 
