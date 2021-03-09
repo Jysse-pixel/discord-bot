@@ -4,7 +4,6 @@ const bot = new Discord.Client();
 const fs = require("fs");
 const fetch = require('node-fetch');
 const ytdl = require("ytdl-core");
-const CronJob = require('cron').CronJob;
 const queue = new Map();
 const search = require('youtube-search');
 const PREFIX = '/'
