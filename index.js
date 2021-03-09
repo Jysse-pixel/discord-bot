@@ -193,7 +193,8 @@ bot.on('message', message => {
             return;
         } else {
             message.channel.send('Tu dois entrer une commande valide');
-        };
+        }
+    });
 
 
 
@@ -295,11 +296,6 @@ bot.on('message', message => {
             .on("error", error => console.error(error));
         dispatcher.setVolumeLogarithmic(serverQueue.volume / 5);
         serverQueue.textChannel.send(`Start playing: **${song.title}**`);
-    }
+    };
     
-
-
-
-
-
 bot.login(process.env.TOKEN);
