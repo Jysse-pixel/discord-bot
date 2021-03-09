@@ -1,10 +1,14 @@
 const Discord = require("discord.js");
 
 const bot = new Discord.Client();
+const fs = require("fs");
+const bdd = require("./bdd.json");
+const fetch = require('node-fetch');
+const ytdl = require("ytdl-core");
+const CronJob = require('cron').CronJob;
+const list = require("./youtube.json");
 const queue = new Map();
-
-
-const ytdl = require('ytdl-core')
+const search = require('youtube-search');
 const PREFIX = '/'
 
 
