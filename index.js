@@ -176,7 +176,7 @@ bot.on('message', message => {
 
     bot.on('message', async message => {
         if (message.author.bot) return;
-        if (!message.content.startsWith("!")) return;
+        if (!message.content.startsWith("/")) return;
 
         const serverQueue = queue.get(message.guild.id);
         if (message.content.startsWith(`/play`)) {
